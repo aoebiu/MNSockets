@@ -25,6 +25,4 @@ public class MNSocketsApplication {
     public static void main(String[] args) {
         SpringApplication.run(MNSocketsApplication.class, args);
     }
-
-
 }

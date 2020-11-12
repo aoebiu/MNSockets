@@ -19,6 +19,7 @@ public class InfoController {
     @GetMapping("/allDevice")
     public ResponseEntity allDevice(@RequestParam(value = "pn", defaultValue = "1") Integer pn,
                                     @RequestParam(value = "ps", defaultValue = "30") Integer ps) {
+        // TODO
         Page<Device> dat = this.deviceService.deviceAll(pn, ps);
         return ResponseEntity.ok(dat);
     }
