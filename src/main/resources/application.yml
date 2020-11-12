@@ -1,0 +1,35 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /
+    session:
+      timeout: -1
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss.SSS
+    time-zone: GMT+8
+    defaultPropertyInclusion: non_null
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+
+spring:
+  datasource:
+    username: root
+    password: admin
+    url: jdbc:mysql://127.0.0.1:3306/sockets?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: xyz.mengnan.MNSockets.types.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+
+socket:
+  port: 8081
+
+logging:
+  level:
+    cn:
+      keyboardcity: trace
+
+

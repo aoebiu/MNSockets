@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xyz.mengnan.MNSockets.mapper.DeviceMapper">
+
+    <select id="searchAll" parameterType="xyz.mengnan.MNSockets.types.pojo.Device">
+      SELECT * FROM device;
+    </select>
+
+</mapper>
