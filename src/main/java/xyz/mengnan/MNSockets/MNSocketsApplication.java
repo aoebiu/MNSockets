@@ -22,7 +22,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("xyz.mengnan.MNSockets.mapper")
 public class MNSocketsApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(MNSocketsApplication.class, args);
     }
