@@ -11,5 +11,4 @@ public class Device implements Serializable {
     private String did;
     private String threadName;
     private String ctime;
-
 }

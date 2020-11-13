@@ -39,6 +39,7 @@ public class SocketThread extends AdapterThread {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public void toStart() throws IOException, InterruptedException {
         log.info(socket.getRemoteSocketAddress() + " -> " + "success to connect...");
         SendMsgThread sendMessThread = new SendMsgThread(socket);
@@ -57,6 +58,9 @@ public class SocketThread extends AdapterThread {
             SocketUtil.close(socket);
             log.error("connection reset", e);
             Thread.sleep(800);
+        } finally {
+            // this结束了,这个线程也没有运行的意义了
+            sendMessThread.stop();
         }
     }
 
